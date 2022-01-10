@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     if(obj -> calcularSalario()){
         qDebug() << obj -> obrero() -> toString();
     }else{
-
+        qDebug() << "No se pudo realizar el calculo de salarios" ;
     }
 
     return a.exec();
