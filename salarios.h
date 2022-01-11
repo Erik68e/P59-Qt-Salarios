@@ -2,6 +2,9 @@
 #define SALARIOS_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QDebug>
 
 #include "controlador.h"
 
@@ -19,8 +22,18 @@ public:
 
 private slots:
     void on_cmdCalcular_clicked();
+
+    void on_actionGuardar_triggered();
+
+    void on_actionCalcular_triggered();
+
+    void on_actionNuevo_triggered();
+
 private:
     Ui::Salarios *ui;
     Controlador *m_controlador;
+    void limpiar();
+    void calcular();
+    void guardar();
 };
 #endif // SALARIOS_H
