@@ -100,22 +100,57 @@ void Salarios::guardar()
     archivo.close();
 }
 
+void Salarios::abrir()
+{
+    // Obtener la ruta del archivo
+       QString fileName = QFileDialog::getOpenFileName(this,
+                                                       tr("Excel file"),
+                                                       "./",
+                                                       tr ("Archivos Texto (*.txt)"));
+    if(!fileName.isEmpty()){
+       qDebug () << "Formato = txt";
+       openTxt(fileName);
+    }
+}
+
+// Abrir * .txt
+void Salarios::openTxt(const QString &fileName1)
+{
+    QFile file (fileName1); // Cree un nuevo objeto QFile
+
+    if (!file.open(QFile::ReadOnly | QFile::Text)){
+        QMessageBox :: warning (this, tr ("Abrir archivo txt"),
+                               tr ("No se puede leer el archivo% 1: | n% 2.")
+                               .arg(fileName1), (file.errorString()));
+        return ;
+    }
+    QTextStream in (& file); // Nuevo objeto de flujo de texto
+    ui->outResultado->setPlainText(in.readAll());
+}
 
 void Salarios::on_actionGuardar_triggered()
 {
     guardar();
 }
 
-
 void Salarios::on_actionCalcular_triggered()
 {
     calcular();
 }
 
-
 void Salarios::on_actionNuevo_triggered()
 {
     limpiar();
     ui->outResultado->clear();
+}
+
+void Salarios::on_actionSalir_triggered()
+{
+    close();
+}
+
+void Salarios::on_actionAbrir_triggered()
+{
+    abrir();
 }
 

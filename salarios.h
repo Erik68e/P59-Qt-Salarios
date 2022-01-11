@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QFile>
 #include <QFileDialog>
 #include <QDebug>
 
@@ -29,11 +30,18 @@ private slots:
 
     void on_actionNuevo_triggered();
 
+    void on_actionSalir_triggered();
+
+    void on_actionAbrir_triggered();
+
+    void openTxt (const QString & fileName1);
+
 private:
     Ui::Salarios *ui;
     Controlador *m_controlador;
     void limpiar();
     void calcular();
     void guardar();
+    void abrir();
 };
 #endif // SALARIOS_H
