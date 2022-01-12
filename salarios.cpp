@@ -186,3 +186,15 @@ void Salarios::on_actionAbrir_triggered()
     abrir();
 }
 
+void Salarios::on_actionAcerca_de_Salarios_triggered()
+{
+    // Crear un objeto de la ventana que queremos invocar
+    Acerca *dialogo = new Acerca(this);
+    // Enviar parametro a la ventana
+    dialogo->setN_version(VERSION);
+    // Mostrar la ventana
+    dialogo->exec(); //Modal
+    // Obtener datos de la ventana
+    dialogo->valor();
+}
+
