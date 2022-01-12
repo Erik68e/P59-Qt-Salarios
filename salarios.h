@@ -34,7 +34,7 @@ private slots:
 
     void on_actionAbrir_triggered();
 
-    void openTxt (const QString & fileName1);
+    //void openTxt (const QString & fileName1);
 
 private:
     Ui::Salarios *ui;
