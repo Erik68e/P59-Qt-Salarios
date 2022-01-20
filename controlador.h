@@ -2,6 +2,7 @@
 #define CONTROLADOR_H
 
 #include <QObject>
+#include <QDebug>
 
 #include "obrero.h"
 
@@ -21,6 +22,14 @@ public:
     bool calcularSalario();
 
     Obrero *obrero() const;
+
+    double m_ttlBruto = 0.0;
+    double m_ttlNeto = 0.0;
+    double m_ttlIESS = 0.0;
+
+    QString ttlBr();
+    QString ttlIv();
+    QString ttlTo();
 
 signals:
 
