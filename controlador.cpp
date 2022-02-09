@@ -50,11 +50,11 @@ bool Controlador::calcularSalario()
     m_obrero -> setDescuento(descuento);
     m_obrero -> setSalarioNeto(salarioNeto);
     // Retornar true (si todo es correcto)
-    qDebug() << descuento;
-    qDebug() << salarioBruto;
+    qDebug () << descuento;
+    qDebug () << salarioBruto;
     m_ttlBruto += salarioBruto;
-    m_ttlIESS  += descuento;
-    m_ttlNeto  += salarioNeto;
+    m_ttlIESS += descuento;
+    m_ttlNeto += salarioNeto;
 
     return true;
 }
@@ -64,25 +64,26 @@ Obrero *Controlador::obrero() const
     return m_obrero;
 }
 
-QString Controlador::ttlBr()
+QString Controlador::ttlBr ()
 {
-    QString str = "";
-    str.append(" $" + QString::number(m_ttlBruto) + "\n");
-    return str;
+    QString str = " " ;
+        str.append( " $ " + QString::number(m_ttlBruto) + " \n " );
+        return str;
 }
 
-QString Controlador::ttlIv()
+QString Controlador::ttlIv ()
 {
-    QString str = "";
-    str.append(" $" + QString::number(m_ttlIESS) + "\n");
-    return str;
+    QString str = " " ;
+        str.append( " $ " + QString::number(m_ttlIESS) + " \n " );
+        return str;
 }
 
-QString Controlador::ttlTo()
+QString Controlador::ttlTo ()
 {
-    QString str = "";
-    str.append(" $" + QString::number(m_ttlNeto) + "\n");
-    return str;
+    QString str = " " ;
+        str.append(" $ " + QString::number(m_ttlNeto) + " \n " );
+        return str;
 }
+
 
 

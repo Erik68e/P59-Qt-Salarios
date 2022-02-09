@@ -25,11 +25,8 @@ public:
     ~Salarios();
 
 private slots:
-    void on_cmdCalcular_clicked();
 
     void on_actionGuardar_triggered();
-
-    void on_actionCalcular_triggered();
 
     void on_actionNuevo_triggered();
 
@@ -41,9 +38,12 @@ private slots:
 
     void on_actionAcerca_de_Salarios_triggered();
 
+    void on_cmdCalcular_clicked();
+
 private:
     Ui::Salarios *ui;
     Controlador *m_controlador;
+
     void limpiar();
     void calcular();
     void guardar();

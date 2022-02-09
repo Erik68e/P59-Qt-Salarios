@@ -23,10 +23,6 @@ public:
 
     Obrero *obrero() const;
 
-    double m_ttlBruto = 0.0;
-    double m_ttlNeto = 0.0;
-    double m_ttlIESS = 0.0;
-
     QString ttlBr();
     QString ttlIv();
     QString ttlTo();
@@ -35,6 +31,10 @@ signals:
 
 private:
     Obrero *m_obrero;
+
+    double m_ttlBruto = 0;
+    double m_ttlIESS = 0;
+    double m_ttlNeto = 0;
 };
 
 #endif // CONTROLADOR_H

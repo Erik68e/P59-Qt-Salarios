@@ -1,5 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file>Recurso/salario.png</file>
+        <file>Recurso/abrir-correo-electronico.png</file>
+        <file>Recurso/agregar-archivo.png</file>
+        <file>Recurso/boton.png</file>
+        <file>Recurso/buscar.png</file>
+        <file>Recurso/calcular.png</file>
+        <file>Recurso/salvar.png</file>
+        <file>salarios_en.qm</file>
+        <file>salarios_ru.qm</file>
     </qresource>
 </RCC>
